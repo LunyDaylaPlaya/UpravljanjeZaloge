@@ -119,10 +119,10 @@ function StockPage() {
                                 <td>{record.quantity}</td>
                                 <td>{record.unit}</td>
                                 <td>
-                                    {new Intl.NumberFormat("sl-SI").format(getProductPriceById(record.productId))}
+                                    {new Intl.NumberFormat("sl-SI", { style: "currency", currency: "EUR" }).format(getProductPriceById(record.productId))}
                                 </td>
                                 <td>
-                                    {new Intl.NumberFormat("sl-SI").format(getProductPriceById(record.productId) * record.quantity)}
+                                    {new Intl.NumberFormat("sl-SI", { style: "currency", currency: "EUR" }).format(getProductPriceById(record.productId) * record.quantity)}
                                 </td>
                                 <td>
                                     {new Intl.DateTimeFormat("sl-SI", { dateStyle: "short", timeStyle: "short" }).format(

@@ -17,12 +17,12 @@ namespace API.Data
                 new Warehouse { Name = "Skladišče 2", StreetName = "Parkova cesta", HouseNumber = 45, ZipCode = "1000", City = "Ljubljana", State = "Slovenija", Capacity = 800 },
                 new Warehouse { Name = "Skladišče 3", StreetName = "Rečna ulica", HouseNumber = 21, ZipCode = "1000", City = "Ljubljana", State = "Slovenija", Capacity = 1200 },
                 new Warehouse { Name = "Skladišče 4", StreetName = "Hrastova avenija", HouseNumber = 10, ZipCode = "4000", City = "Kranj", State = "Slovenija", Capacity = 1100 },
-                new Warehouse { Name = "Skladišče 5", StreetName = "Gorska cesta", HouseNumber = 8, ZipCode = "5000", City = "Novo Mesto", State = "Slovenija", Capacity = 900 },
-                new Warehouse { Name = "Skladišče 6", StreetName = "Sončna boulevard", HouseNumber = 7, ZipCode = "6000", City = "Piran", State = "Slovenija", Capacity = 1300 },
-                new Warehouse { Name = "Skladišče 7", StreetName = "Vrhovna ulica", HouseNumber = 2, ZipCode = "7000", City = "Postojna", State = "Slovenija", Capacity = 950 },
-                new Warehouse { Name = "Skladišče 8", StreetName = "Obalna ulica", HouseNumber = 5, ZipCode = "8000", City = "Koper", State = "Slovenija", Capacity = 1050 },
+                new Warehouse { Name = "Skladišče 5", StreetName = "Gorska cesta", HouseNumber = 8, ZipCode = "8000", City = "Novo Mesto", State = "Slovenija", Capacity = 900 },
+                new Warehouse { Name = "Skladišče 6", StreetName = "Sončna boulevard", HouseNumber = 7, ZipCode = "6000", City = "Koper", State = "Slovenija", Capacity = 1300 },
+                new Warehouse { Name = "Skladišče 7", StreetName = "Vrhovna ulica", HouseNumber = 2, ZipCode = "8000", City = "Novo Mesto", State = "Slovenija", Capacity = 950 },
+                new Warehouse { Name = "Skladišče 8", StreetName = "Obalna ulica", HouseNumber = 5, ZipCode = "6000", City = "Koper", State = "Slovenija", Capacity = 1050 },
                 new Warehouse { Name = "Skladišče 9", StreetName = "Gozdna pot", HouseNumber = 3, ZipCode = "1000", City = "Ljubljana", State = "Slovenija", Capacity = 850 },
-                new Warehouse { Name = "Skladišče 10", StreetName = "Javorova ulica", HouseNumber = 15, ZipCode = "2000", City = "Kranj", State = "Slovenija", Capacity = 1150 }
+                new Warehouse { Name = "Skladišče 10", StreetName = "Javorova ulica", HouseNumber = 15, ZipCode = "4000", City = "Kranj", State = "Slovenija", Capacity = 1150 }
             };
 
             context.Warehouses.AddRange(warehouses);
