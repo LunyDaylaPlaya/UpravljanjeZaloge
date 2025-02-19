@@ -13,7 +13,7 @@ function App() {
       justifyContent: 'center',
       alignItems: 'center'
     }}>
-      <h1 style={{textAlign: 'center', color:"white", textShadow:"1px 1px 4px rgba(0,0,0,0.5)"}}>Sistem za <br/> Upravljanje z Zalogo</h1>
+      <h1 style={{textAlign: 'center', color:"rgb(108, 206, 235)", textShadow:"1px 1px 4px rgba(0,0,0,0.5)"}}>Sistem za <br/> Upravljanje Zaloge</h1>
     </div>
     
     </>
