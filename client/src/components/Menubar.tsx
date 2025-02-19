@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from 'react-router';
 
 function Menubar() {
   const navigate = useNavigate();
-  const location = useLocation(); // Detects route changes
+  const location = useLocation();
   const [user, setUser] = useState<string | null>(null);
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -13,7 +13,6 @@ function Menubar() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  // Function to check if a user is logged in
   const updateUser = () => {
     const storedFirstName = localStorage.getItem("firstName");
     const storedLastName = localStorage.getItem("lastName");
@@ -29,18 +28,16 @@ function Menubar() {
     }
   };
 
-  // Runs on component mount and route changes
   useEffect(() => {
     updateUser();
 
-    // Check for a toast message in localStorage
     const message = localStorage.getItem("toastMessage");
     if (message) {
       setToastMessage(message);
       setShowToast(true);
-      localStorage.removeItem("toastMessage"); // Clear after displaying
+      localStorage.removeItem("toastMessage");
     }
-  }, [location.pathname]); // Runs on route change
+  }, [location.pathname]);
 
   const handleLogout = () => {
     localStorage.removeItem("firstName");
@@ -125,7 +122,6 @@ function Menubar() {
         </Modal.Footer>
       </Modal>
 
-      {/* Toast Notification */}
       <ToastContainer position="top-center" className="p-3">
         <Toast onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
           <Toast.Header>

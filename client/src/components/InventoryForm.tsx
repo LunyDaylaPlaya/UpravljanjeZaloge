@@ -42,7 +42,7 @@ const InventoryForm = ({ isOpen, onClose, fetchInventory, currentData }: Invento
     const recordToSave = {
       ...newInventoryRecord,
       id: currentData?.id || 0,
-      dateAdded: new Date().toISOString(),  // Set current date/time
+      dateAdded: new Date().toISOString(),
     };
   
     if (currentData && currentData.id) {
