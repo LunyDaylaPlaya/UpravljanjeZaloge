@@ -6,17 +6,23 @@ import { BASE_URL } from "../const";
 
 function Register() {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  const handleRegister = async (e: React.FormEvent) => {
+  const handleRegister = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setError(null);
 
     try {
-      await axios.post(`${BASE_URL}auth/register`, { name, email, password });
+      await axios.post(`${BASE_URL}auth/register`, {
+        FirstName: firstName,
+        LastName: lastName,
+        Email: email,
+        Password: password,
+      });
       navigate("/login");
     } catch (err) {
       setError("Registration failed");
@@ -30,17 +36,43 @@ function Register() {
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3">
           <Form.Label>Ime</Form.Label>
-          <Form.Control type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+          <Form.Control
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Priimek</Form.Label>
+          <Form.Control
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <Form.Control
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Geslo</Form.Label>
-          <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <Form.Control
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </Form.Group>
-        <Button variant="primary" type="submit">Registracija</Button>
+        <Button variant="primary" type="submit">
+          Registracija
+        </Button>
       </Form>
     </Container>
   );

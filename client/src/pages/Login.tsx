@@ -10,19 +10,22 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setError(null);
 
     try {
-      const res = await axios.post(`${BASE_URL}auth/login`, { email, password });
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", res.data.user.name);
-      navigate("/");
+        const res = await axios.post(`${BASE_URL}auth/login`, { email, password });
+        localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("email", res.data.email);
+        localStorage.setItem("firstName", res.data.firstName);
+        localStorage.setItem("lastName", res.data.lastName);
+        navigate("/");
     } catch (err) {
-      setError("Invalid credentials");
+        setError("Invalid credentials");
     }
   };
+
 
   return (
     <Container style={{ maxWidth: "400px", marginTop: "2em" }}>

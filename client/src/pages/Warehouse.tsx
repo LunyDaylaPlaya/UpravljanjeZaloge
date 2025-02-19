@@ -66,7 +66,7 @@ function WarehousePage() {
           <h1>Skladišča</h1>
           <Button variant="success" size="sm" onClick={() => handleAdd()}>Dodaj Skladišče</Button>
         </div>
-        <Table striped bordered hover style={{ width: '70%', margin: 'auto' }}>
+        <Table striped bordered hover responsive style={{ width: '70%', margin: 'auto' }}>
           <thead>
             <tr>
               <th>#</th>

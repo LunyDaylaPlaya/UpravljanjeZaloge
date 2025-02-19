@@ -168,3 +168,4 @@ C:\Users\cyber\OneDrive\Documents\B2 IT Služba\Front-End_Programer\upravljanje_
 C:\Users\cyber\OneDrive\Documents\B2 IT Služba\Front-End_Programer\upravljanje_zaloge\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\cyber\OneDrive\Documents\B2 IT Služba\Front-End_Programer\upravljanje_zaloge\API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\cyber\OneDrive\Documents\B2 IT Služba\Front-End_Programer\upravljanje_zaloge\API\obj\Debug\net9.0\API.sourcelink.json
+C:\Users\cyber\OneDrive\Documents\B2 IT Služba\Front-End_Programer\upravljanje_zaloge\API\bin\Debug\net9.0\BCrypt.Net-Next.dll
